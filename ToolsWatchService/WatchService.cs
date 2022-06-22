@@ -42,7 +42,7 @@ namespace ToolsWatchService
 
         public WatchService()
         {
-            Log.Information("WatchService ctrl");
+            Log.Information("WatchService ctor");
             foreach (var t in ToolTask.List)
             {
                 taskList.Add(new(t));
