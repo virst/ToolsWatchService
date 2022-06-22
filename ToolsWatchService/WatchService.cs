@@ -85,6 +85,7 @@ namespace ToolsWatchService
         }
         private void ServiceTasks()
         {
+            Log.Information("ServiceTasks");
             foreach (var t in taskList)
             {
                 if (t.Active) continue;
@@ -92,6 +93,7 @@ namespace ToolsWatchService
                 {
                     t.Thread = new Thread(() => ThreadWork(t));
                     t.Thread.Start();
+                    Log.Information("{0} Start", t.Task.Name);
                     continue;
                 }
                 Log.Error("ThreadWork-{0};ExitCode-{1}", t.Task.Name, t.Proc.ExitCode);
@@ -103,6 +105,7 @@ namespace ToolsWatchService
             foreach (var t in taskList)
             {
                 t.Proc.Kill(true);
+                Log.Information("{0} Kill", t.Task.Name);
             }
         }
 
@@ -125,6 +128,7 @@ namespace ToolsWatchService
             {
                 Thread.Sleep(ti.Task.CoolDown ?? 0);
                 ti.Active = false;
+                Log.Information("{0} Active = false", ti.Task.Name);
             }
         }
 
