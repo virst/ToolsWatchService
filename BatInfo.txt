@@ -1,0 +1,1 @@
+sc.exe create "Tools Watch Service" binpath="C:\tmp\ToolsWatchService.exe C:\tmp\prms.json C:\tmp\log\log.txt"

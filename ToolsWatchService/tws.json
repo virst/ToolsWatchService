@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Name": null,
+    "FileName": "df",
+    "Arguments": "123",
+    "EnvironmentVariables": {
+      "er": "qq",
+      "err": "q123q"
+    },
+    "CoolDown": 15000
+  },
+  {
+    "Name": null,
+    "FileName": "df",
+    "Arguments": "123",
+    "EnvironmentVariables": {
+      "er": "qq",
+      "err": "q123q"
+    },
+    "CoolDown": 45000
+  }
+]
