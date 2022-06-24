@@ -97,6 +97,7 @@ namespace ToolsWatchService
                     continue;
                 }
                 Log.Error("ThreadWork-{0};ExitCode-{1}", t.Task.Name, t.Proc.ExitCode);
+                t.Thread = null;
             }
         }
 
